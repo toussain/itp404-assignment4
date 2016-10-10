@@ -1,0 +1,15 @@
+<h1>Assignment 4</h1>
+
+{{#each model.data.children as |child|}}
+  Title: {{child.data.title}}<p></p>
+  Score: {{child.data.score}}<p></p>
+  Number of Comments: {{child.data.num_comments}}<p></p>
+  {{#if child.data.archived}}
+  Archived
+  {{else}}
+  Not Archived
+  {{/if}}
+  <p>-----------</p>
+{{/each}}
+
+{{outlet}}
